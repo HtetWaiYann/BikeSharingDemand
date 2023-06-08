@@ -6,14 +6,16 @@
 The predictions from the AutoGluton are the target column (count) only. We need to match the datetime data from the kaggle sample submission with the predictions so that we will get a format that kaggle approves.
 
 ### What was the top ranked model that performed?
-The last one with Hyperparamters tuning with a score of 0.48595.
+The top performed model is 'WeightedEnsemble_L3'.
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
 First of all, I split the datetime columns to year, month and day. And I found that "season" and "weather" columns are treated as numerical values. So, I changed them as categorical values. 
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-It is better after adding the additional features. I think it is because of the date time value. It is better for the regression model to train with year, month, day columns instead of date time columns.
+It is better after adding the additional features. I think it is because of the date time value. It is better for the regression model to train with year, month, day columns instead of date time columns. 
+Here is the performance increasement percentage comparing the first model and the final model.
+Increase Percentage = [(0.48595 - 1.79279) / 1.79279] * 100 = -72.81%. It is negative because it actually is a decrease percentage.
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
